@@ -41,5 +41,10 @@ namespace LambdaProblem
                 Console.WriteLine("Id: " + person.SSN + " " + "Name: " + person.Name + " " + "Address: " + person.Address + "  " + "Age: " + person.Age);
             }            
         }
+        public void AverageOfAges()
+        {
+            double res = list.Average(x => x.Age);
+            Console.WriteLine("Average of All Ages : " + res);
+        }
     }
 }
