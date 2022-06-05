@@ -46,5 +46,16 @@ namespace LambdaProblem
             double res = list.Average(x => x.Age);
             Console.WriteLine("Average of All Ages : " + res);
         }
+        public void FindPerson()
+        {
+            if (list.Exists(x => x.Name == "Yogesh"))
+            {
+                Console.WriteLine("Yes, Yogesh is in the list");
+            }
+            else
+            {
+                Console.WriteLine("No Records Found");
+            }
+        }
     }
 }
