@@ -38,8 +38,8 @@ namespace LambdaProblem
             var result = list.FindAll(x => (x.Age >= 13 && x.Age <= 18));
             foreach (var person in result)
             {
-                Console.WriteLine("Id: " + person.SSN + " " + "Name: " + person.Name + " " + "Address: " + person.Address + "  " + "Age: " + person.Age);
-            }            
+                Console.WriteLine("SSN: " + person.SSN + "\t" + "Name: " + person.Name + "\t" + "Address: " + person.Address + "\t" + "Age: " + person.Age);
+            }
         }
         public void AverageOfAges()
         {
@@ -55,6 +55,14 @@ namespace LambdaProblem
             else
             {
                 Console.WriteLine("No Records Found");
+            }
+        }
+        public void SkipRecords()
+        {
+            var res = list.FindAll(e => e.Age > 60);
+            foreach (var person in res)
+            {
+                Console.WriteLine("SSN: " + person.SSN + "\t" + "Name: " + person.Name + "\t" + "Address: " + person.Address + "\t" + "Age: " + person.Age);
             }
         }
     }
