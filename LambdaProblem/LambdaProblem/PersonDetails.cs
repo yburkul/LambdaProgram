@@ -22,7 +22,15 @@ namespace LambdaProblem
 
             foreach (var person in list)
             {
-                Console.WriteLine("SSN: " + person.SSN + " " + "Name: " + person.Name + " " + "Address: " + person.Address + "  " + "Age: " + person.Age);
+                Console.WriteLine("SSN: " + person.SSN + "\t" + "Name: " + person.Name + "\t" + "Address: " + person.Address + "\t" + "Age: " + person.Age);
+            }
+        }
+        public void RetrieveTopTwoRecords()
+        {
+            var Result = list.FindAll(x => (x.Age < 60)).Take(2).ToList();
+            foreach (var person in Result)
+            {
+                Console.WriteLine("SSN: " + person.SSN + "\t" + "Name: " + person.Name + "\t" + "Address: " + person.Address + "\t" + "Age: " + person.Age);
             }
         }
     }
