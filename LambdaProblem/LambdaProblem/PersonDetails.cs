@@ -33,5 +33,13 @@ namespace LambdaProblem
                 Console.WriteLine("SSN: " + person.SSN + "\t" + "Name: " + person.Name + "\t" + "Address: " + person.Address + "\t" + "Age: " + person.Age);
             }
         }
+        public void AgeInBetween()
+        {
+            var result = list.FindAll(x => (x.Age >= 13 && x.Age <= 18));
+            foreach (var person in result)
+            {
+                Console.WriteLine("Id: " + person.SSN + " " + "Name: " + person.Name + " " + "Address: " + person.Address + "  " + "Age: " + person.Age);
+            }            
+        }
     }
 }

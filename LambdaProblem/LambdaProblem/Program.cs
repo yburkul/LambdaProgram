@@ -13,6 +13,7 @@ namespace LambdaProblem
             {
                 Console.WriteLine("\n1: Add Details");
                 Console.WriteLine("2: Retrieve top 2 records from the list for age is less than 60");
+                Console.WriteLine("3: Retrieve all record from the list for age between 13 to 18");
                 Console.WriteLine("0: Exit");
                 input = int.Parse(Console.ReadLine());
                 switch (input)
@@ -22,6 +23,9 @@ namespace LambdaProblem
                         break;
                     case 2:
                         personDetails.RetrieveTopTwoRecords();
+                        break;
+                    case 3:
+                        personDetails.AgeInBetween();
                         break;
                     case 0:
                         Console.WriteLine("Exit");
